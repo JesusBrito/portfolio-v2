@@ -83,6 +83,7 @@ export default function Home() {
                 <section className={style.header}>
                     <div className={style.header_row_container}>
                         <div className={style.header_row_column_text}>
+                            <p>Jesus Brito</p>
                             <h1>Desarrollador Full Stack</h1>
                             <p>Por 4 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
                                 para ayudandoarles a programar nuevas ideas.</p>

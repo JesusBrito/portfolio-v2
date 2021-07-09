@@ -5,6 +5,7 @@ const CardProject = ({date, name, small_description, url}) => {
     return(
         <div className={style.card}>
             <div className={style.card_header}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={url} alt={name}/>
             </div>
             <div className={style.card_body}>

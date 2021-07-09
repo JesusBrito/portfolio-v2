@@ -89,6 +89,7 @@ export default function Home() {
                                 para ayudandoarles a programar nuevas ideas.</p>
                         </div>
                         <div className={style.header_row_column_image}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/profile_image.png" alt="Jesus Brito Foto de perfil"/>
                         </div>
                     </div>
@@ -131,6 +132,7 @@ export default function Home() {
                     </div>
                     <div className={style.contact_column_image}>
                         <div className={style.contact_container_image}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src='/contact.png' alt=""/>
                         </div>
                     </div>

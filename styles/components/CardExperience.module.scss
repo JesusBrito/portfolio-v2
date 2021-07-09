@@ -1,0 +1,53 @@
+@import "styles/variables";
+
+.card{
+    width: 30%;
+    margin: 20px 0;
+}
+
+.card_header{
+    padding: 10px 15px;
+
+    & p:nth-child(1){
+        font-family: 'Rubik Light', serif;
+        color: $darkGray;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    & p:nth-child(2){
+        font-family: 'Rubik Medium', serif;
+        color: $black;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    & div{
+        width: 15%;
+        height: 3px;
+        background: $blue;
+    }
+}
+
+.card_body{
+    padding: 0 15px 10px 15px;
+    p {
+        font-family: 'Rubik Light', serif;
+        color: $darkGray;
+        font-size: 17px;
+        margin: 0;
+    }
+}
+
+.card_footer{
+    padding: 0 15px 10px 15px;
+
+    & a{
+        font-family: 'Rubik Regular', serif;
+        text-decoration: none;
+    }
+    & a:hover{
+        text-decoration: underline;
+        text-decoration-color: $blue;
+    }
+}

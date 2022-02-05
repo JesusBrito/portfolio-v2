@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from '../styles/components/MainLayout.module.scss'
+import styles from "../styles/components/MainLayout.module.scss";
 import ScrollToTop from "./ScrollToTop";
+import {Container, Nav, Navbar} from "react-bootstrap";
+
 const MainLayout = ({title, active, children}) => {
     return (
         <div className={styles.layout_grid_container}>
@@ -9,53 +11,55 @@ const MainLayout = ({title, active, children}) => {
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <header className={styles.layout_header}>
-                <div className="container">
-                    <div className={styles.layout_header_container}>
-                        <ul>
-                            <li>
-                                <Link href="#">
-                                    Sobre mí
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#sectionProjects">
-                                    <a href="#">Proyectos</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#sectionExperience">
-                                    <a href="#">Experiencia</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#sectionContact">
-                                    <a href="#">Creemos algo juntos</a>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <header>
+                <Navbar bg="dark" expand="lg" fixed="top">
+                    <Container>
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Collapse id="navbarScroll">
+                            <Nav className="ms-auto">
+                                <Nav.Link  href="#action1">Home</Nav.Link>
+                                <Nav.Link className="active" href="#action2">Link</Nav.Link>
+                                <Nav.Link href="#action2">Link</Nav.Link>
+                                <Nav.Link href="#action2">Link</Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
             </header>
-            <main className={styles.layout_main}>
-                {children}
-            </main>
+            <main className={styles.layout_main}>{children}</main>
             <footer className={styles.layout_footer}>
                 <div className="container">
                     <div className={styles.layout_footer_container}>
                         <div className={styles.layout_footer_networks_column}>
                             <div className={styles.layout_footer_networks}>
-                                <a href="https://github.com/JesusBrito" className={styles.github_logo} target="_blank" rel="noreferrer">
+                                <a
+                                    href="https://github.com/JesusBrito"
+                                    className={styles.github_logo}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     <i className="fab fa-github"/>
                                 </a>
-                                <a href="https://www.linkedin.com/in/jesusbritobrito" className={styles.linkedin_logo} target="_blank" rel="noreferrer">
+                                <a
+                                    href="https://www.linkedin.com/in/jesusbritobrito"
+                                    className={styles.linkedin_logo}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     <i className="fab fa-linkedin"/>
                                 </a>
-                                <a href="https://wa.me/525533684635?text=Creemos%20algo%20juntos" target="_blank" className={styles.whatsapp_logo}  rel="noreferrer">
+                                <a
+                                    href="https://wa.me/525533684635?text=Creemos%20algo%20juntos"
+                                    target="_blank"
+                                    className={styles.whatsapp_logo}
+                                    rel="noreferrer"
+                                >
                                     <i className="fab fa-whatsapp"/>
                                 </a>
                             </div>
-                            <p><i className="far fa-copyright"/> 2021 Jesus Brito</p>
+                            <p>
+                                <i className="far fa-copyright"/> 2021 Jesus Brito
+                            </p>
                         </div>
                         <div className={styles.layout_footer_menu}>
                             <div className={styles.layout_footer_menu_column}>
@@ -83,7 +87,7 @@ const MainLayout = ({title, active, children}) => {
             </footer>
             <ScrollToTop/>
         </div>
-    )
-}
+    );
+};
 
-export default MainLayout
+export default MainLayout;

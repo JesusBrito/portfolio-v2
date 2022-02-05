@@ -1,0 +1,48 @@
+@import "variables";
+.header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h1 {
+        font-family: 'Rubik Medium', serif;
+        color: $black;
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+
+    p:nth-child(1){
+        font-family: 'Rubik Regular', serif;
+        font-size: 32px;
+        color: $black;
+    }
+
+    p{
+        font-family: 'Karla Light', serif;
+        font-size: 24px;
+        color: $darkGray;
+    }
+
+    ul {
+        padding: 0;
+        li{
+            display: inline-block;
+            border-bottom: 3px solid $black;
+
+            &:hover{
+                border-bottom: 3px solid $blue;
+            }
+
+            a {
+                text-decoration: none;
+                color: $black;
+                font-size: 40px;
+                font-family: "Rubik Regular", serif;
+            }
+        }
+        li:nth-child(2) {
+            margin: 0 40px;
+        }
+    }
+}

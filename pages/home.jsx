@@ -4,6 +4,8 @@ import Link from 'next/link'
 import style from '../styles/Home.module.scss'
 import CardProject from "../components/CardProject";
 import CardExperience from "../components/CardExperience"
+import {Col, Container, Row} from "react-bootstrap";
+import {Button} from "bootstrap";
 
 export default function Home() {
     const dataMock = [

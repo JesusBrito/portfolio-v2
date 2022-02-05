@@ -14,12 +14,10 @@ export default function ScrollToTop() {
     useEffect(() => {
         // Button is displayed after scrolling for 500 pixels
         const toggleVisibility = () => {
-            console.log(window.pageYOffset)
-            console.log(buttonRef.current)
             if (window.pageYOffset > 500) {
-                buttonRef.current.style.display = "flex";
+                buttonRef?.current?.style?.display = "flex";
             } else {
-                buttonRef.current.style.display = "none";
+                buttonRef?.current?.style?.display = "none";
             }
         };
 

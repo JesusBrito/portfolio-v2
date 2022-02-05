@@ -6,11 +6,15 @@ import CardProject from "../components/CardProject/CardProject";
 import CardExperience from "../components/CardExperience/CardExperience";
 import {useEffect} from "react";
 import CardKnowledge from "../components/CardKnowledge/CardKnowledge";
+import {useRouter} from "next/router";
 
 const Home = () => {
-    useEffect(() => {
+    const router = useRouter();
 
-    }, [])
+    const goToContact = () => {
+        router.push("contact")
+    }
+
     const dataMock = [
         {
             id: 1,
@@ -95,7 +99,7 @@ const Home = () => {
             id: 2,
             icon: "fab fa-node-js",
             class: "node_green",
-            title: "Backend NodeJs",
+            title: "Backend Node.js",
             text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
         },
         {
@@ -125,7 +129,7 @@ const Home = () => {
     return (
         <MainLayout>
             <Container>
-                <section className={style.header}>
+                <section className={style.header} id="sectionAbout">
                     <Row>
                         <Col sm={12} md={9} className="order-2 order-md-1 mt-3 m-md-0">
                             <p>Jesus Brito</p>
@@ -204,7 +208,7 @@ const Home = () => {
                             <Row className="w-100">
                                 <Col md={6}>
                                     <div className="d-grid gap-2">
-                                        <Button variant="primary">Contactar</Button>
+                                        <Button variant="primary" onClick={() => goToContact()}>Contactar</Button>
                                     </div>
                                 </Col>
                             </Row>

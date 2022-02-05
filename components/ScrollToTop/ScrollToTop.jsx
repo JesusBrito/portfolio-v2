@@ -15,9 +15,9 @@ export default function ScrollToTop() {
         // Button is displayed after scrolling for 500 pixels
         const toggleVisibility = () => {
             if (window.pageYOffset > 500) {
-                buttonRef.current.style.display = "flex";
+                buttonRef?.current?.style?.display = "flex";
             } else {
-                buttonRef.current.style.display = "none";
+                buttonRef?.current?.style?.display = "none";
             }
         };
         window.addEventListener("scroll", toggleVisibility);

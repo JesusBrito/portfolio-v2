@@ -3,10 +3,11 @@ import Link from "next/link";
 import styles from "../styles/components/MainLayout.module.scss";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
+import React from "react";
 const MainLayout = ({title, active, children}) => {
 
     return (
-        <div>
+        <React.Fragment>
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico"/>
@@ -17,7 +18,8 @@ const MainLayout = ({title, active, children}) => {
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
-                                <Nav.Link href="#action1">Sobre mí</Nav.Link>
+                                <Nav.Link href="home"> Inicio</Nav.Link>
+                                <Nav.Link href="#sectionAbout">Sobre mí</Nav.Link>
                                 <Nav.Link href="#sectionProjects">Proyectos</Nav.Link>
                                 <Nav.Link href="#sectionExperience">Experiencia</Nav.Link>
                                 <Nav.Link href="#sectionContact">Creemos algo juntos</Nav.Link>
@@ -57,9 +59,6 @@ const MainLayout = ({title, active, children}) => {
                                     <i className="fab fa-whatsapp"/>
                                 </a>
                             </div>
-                            <p className={styles.footer_copy}>
-                                <i className="far fa-copyright"/> 2022 Jesús Brito
-                            </p>
                         </Col>
                         <Col md={{ span: 4, offset: 6 }}>
                             <Row>
@@ -90,10 +89,13 @@ const MainLayout = ({title, active, children}) => {
                             </Row>
                         </Col>
                     </Row>
+                    <p className={styles.footer_copy}>
+                        <i className="far fa-copyright"/> 2022 Jesús Brito
+                    </p>
                 </div>
             </footer>
             <ScrollToTop/>
-        </div>
+        </React.Fragment>
     );
 };
 

@@ -1,13 +1,6 @@
 @import "styles/variables";
 
-.card{
-    width: 30%;
-    margin: 20px 0;
-}
-
 .card_header{
-    padding: 10px 15px;
-
     & p:nth-child(1){
         font-family: 'Rubik Light', serif;
         color: $darkGray;
@@ -30,7 +23,7 @@
 }
 
 .card_body{
-    padding: 0 15px 10px 15px;
+    padding: 15px 0px 0px 0px;
     p {
         font-family: 'Rubik Light', serif;
         color: $darkGray;

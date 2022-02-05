@@ -1,0 +1,14 @@
+@import "variables";
+$theme-colors: (
+        "primary": $blue,
+        "light": $white
+);
+
+$card-border-radius: 12px;
+$card-border-width: 0px;
+$btn-border-radius: 0.5rem;
+$btn-box-shadow: 0 1px 8px $darkBlueTransparent;
+$btn-font-family: "Karla Medium";
+$navbar-light-color: $black;
+$navbar-light-hover-color: $blue;
+@import "~bootstrap/scss/bootstrap";

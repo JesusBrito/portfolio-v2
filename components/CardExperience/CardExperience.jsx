@@ -1,7 +1,9 @@
+import style from './CardExperience.module.scss'
+import React from "react";
 
 const CardExperience = ({job, company, description}) => {
     return(
-        <div className={style.card}>
+        <React.Fragment>
             <div className={style.card_header}>
                 <p>{job}</p>
                 <p>{company}</p>
@@ -11,7 +13,7 @@ const CardExperience = ({job, company, description}) => {
                 <p>{description}</p>
             </div>
 
-        </div>
+        </React.Fragment>
     )
 }
 

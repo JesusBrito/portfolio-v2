@@ -1,13 +1,16 @@
 import MainLayout from "../components/MainLayout";
+import {Button, Col, Container, Row} from "react-bootstrap";
 import Link from 'next/link'
+import style from '../styles/pages/Home.module.scss'
+import CardProject from "../components/CardProject/CardProject";
+import CardExperience from "../components/CardExperience/CardExperience";
+import {useEffect} from "react";
+import CardKnowledge from "../components/CardKnowledge/CardKnowledge";
 
-import style from '../styles/Home.module.scss'
-import CardProject from "../components/CardProject";
-import CardExperience from "../components/CardExperience"
-import {Col, Container, Row} from "react-bootstrap";
-import {Button} from "bootstrap";
+const Home = () => {
+    useEffect(() => {
 
-export default function Home() {
+    }, [])
     const dataMock = [
         {
             id: 1,
@@ -79,67 +82,145 @@ export default function Home() {
             description: 'Encargado del desarrollo y mantenimiento de la aplicación Noktos para el serctor hotelero.'
         }
     ]
+
+    const knowledgeMock = [
+        {
+            id: 1,
+            icon: "fab fa-react",
+            class: "react_blue",
+            title: "Frontend React",
+            text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
+        },
+        {
+            id: 2,
+            icon: "fab fa-node-js",
+            class: "node_green",
+            title: "Backend NodeJs",
+            text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
+        },
+        {
+            id: 3,
+            icon: "fas fa-code",
+            class: "html_orange",
+            title: "Tecnologías Web",
+            text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
+        },
+        {
+            id: 4,
+            icon: "fas fa-mobile-alt",
+            class: "mobile_green",
+            title: "Mobile",
+            text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
+        },
+        {
+            id: 5,
+            icon: "fas fa-server",
+            class: "cloud_blue",
+            title: "Cloud",
+            text: "<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus blanditiis ducimus eius harum, illum in itaque necessitatibus obcaecati quaerat quasi qui <b>veniam.</b> Ad eos, hic mollitia odio pariatur repudiandae sint!</p>"
+        }
+
+    ]
+
     return (
-        <MainLayout title="Jesus Brito|Web Developer">
-            <div className="container">
+        <MainLayout>
+            <Container>
                 <section className={style.header}>
-                    <div className={style.header_row_container}>
-                        <div className={style.header_row_column_text}>
+                    <Row>
+                        <Col sm={12} md={9}>
                             <p>Jesus Brito</p>
                             <h1>Desarrollador Full Stack</h1>
                             <p>Por 4 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
-                                para ayudandoarles a programar nuevas ideas.</p>
-                        </div>
-                        <div className={style.header_row_column_image}>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/profile_image.png" alt="Jesus Brito Foto de perfil"/>
-                        </div>
-                    </div>
-                    <ul>
-                        <li><Link href="home">Sobre mí</Link></li>
-                        <li><a href="https://blog.jesusbritodeveloper.com/" target="_blank" rel="noreferrer">Blog</a>
-                        </li>
-                    </ul>
+                                ayudándoles a programar nuevas ideas.</p>
+                            <ul>
+                                <li><Link href="home">Sobre mí</Link></li>
+                                <li><a href="https://blog.jesusbritodeveloper.com/" target="_blank"
+                                       rel="noreferrer">Blog</a>
+                                </li>
+                            </ul>
+                        </Col>
+                        <Col sm={12} md={3} className="d-flex justify-content-center align-items-center">
+                            <img src="/profile_image.png" className="w-75 rounded-circle shadow"
+                                 alt="Jesus Brito Foto de perfil"/>
+                        </Col>
+                    </Row>
                 </section>
 
-                <section className={style.proyects} id="sectionProjects">
-                    <h2 className="submenu_header">Proyectos</h2>
-                    <div className={style.proyects_list_container}>
+                <section className="mb-5 animate__animated animate__jackInTheBox" id="">
+                    <h2 className={style.submenu_header}>Conocimientos</h2>
+                    <Row>
+                        {
+                            knowledgeMock.map(data => (
+                                <Col className="my-3" md={4} key={data.id}>
+                                    <CardKnowledge
+                                        icon={data.icon}
+                                        classIcon={data.class}
+                                        title={data.title}
+                                        text={data.text}
+                                        url={data.url}/>
+                                </Col>
+                            ))
+                        }
+                    </Row>
+                </section>
+
+                <section className="mb-5" id="sectionProjects">
+                    <h2 className={style.submenu_header}>Proyectos</h2>
+                    <Row>
                         {
                             dataMock.map(data => (
-                                <CardProject key={data.id} name={data.name} date={data.date}
-                                             small_description={data.small_description} url={data.url}/>
+                                <Col className="my-3" md={4} key={data.id}>
+                                    <CardProject
+                                        name={data.name}
+                                        date={data.date}
+                                        smallDescription={data.small_description}
+                                        url={data.url}/>
+                                </Col>
                             ))
                         }
-                    </div>
+                    </Row>
                 </section>
-
-                <section id="sectionExperience">
-                    <h2 className="submenu_header">Experiencia</h2>
-                    <div className={style.proyects_list_container}>
+                <section className="mb-5" id="sectionExperience">
+                    <h2 className={style.submenu_header}>Experiencia</h2>
+                    <Row>
                         {
                             jobMock.map(data => (
-                                <CardExperience key={data.id} job={data.job} company={data.company}
-                                                description={data.description}/>
+                                <Col className="my-3" md={4} key={data.id}>
+                                    <CardExperience
+                                        job={data.job}
+                                        company={data.company}
+                                        description={data.description}/>
+                                </Col>
                             ))
                         }
-                    </div>
+                    </Row>
                 </section>
+                <section id="sectionContact" className="pb-5">
+                    <Row className={style.contact}>
+                        <Col md={7} className="d-flex align-items-start justify-content-center flex-column">
+                            <h2 className={style.submenu_header}>Creemos algo juntos</h2>
+                            <p>No importa si es grande o pequeño yo te ayudo 😉</p>
 
-                <section className={style.contact} id="sectionContact">
-                    <div className={style.contact_column_text}>
-                        <h2 className="submenu_header">Creemos algo juntos</h2>
-                        <p>No importa si es grande o pequeño yo te ayudo 😉</p>
-                        <button className='btn button_blue'>Contactar</button>
-                    </div>
-                    <div className={style.contact_column_image}>
-                        <div className={style.contact_container_image}>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src='/contact.png' alt=""/>
-                        </div>
-                    </div>
+                            <Row className="w-100">
+                                <Col md={6}>
+                                    <div className="d-grid gap-2">
+                                        <Button variant="primary">Contactar</Button>
+                                    </div>
+                                </Col>
+                            </Row>
+
+                        </Col>
+
+                        <Col md={5} className="d-flex justify-content-center">
+                            <div className="w-75">
+                                <img className="img-fluid rounded-3 shadow " src='/contact.png' alt=""/>
+                            </div>
+                        </Col>
+                    </Row>
                 </section>
-            </div>
+            </Container>
         </MainLayout>
     )
 }
+
+export default Home

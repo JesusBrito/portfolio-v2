@@ -1,4 +1,4 @@
-@import "variables";
+@import "styles/variables";
 .header{
     display: flex;
     flex-direction: column;
@@ -28,21 +28,34 @@
         padding: 0;
         li{
             display: inline-block;
-            border-bottom: 3px solid $black;
-
-            &:hover{
-                border-bottom: 3px solid $blue;
-            }
-
             a {
-                text-decoration: none;
                 color: $black;
+                text-decoration: none;
                 font-size: 40px;
                 font-family: "Rubik Regular", serif;
+                border-bottom: 3px solid $black;
+                &:hover{
+                    color: $blue;
+                    border-bottom: 3px solid $blue;
+                }
             }
         }
         li:nth-child(2) {
             margin: 0 40px;
         }
+    }
+}
+
+.submenu_header{
+    font-family: 'Rubik Medium', serif;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.contact{
+    p{
+        font-family: 'Karla Light', serif;
+        font-size: 24px;
+        color: $darkGray;
     }
 }

@@ -1,26 +1,26 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/components/MainLayout.module.scss";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import {Container, Nav, Navbar} from "react-bootstrap";
-
 const MainLayout = ({title, active, children}) => {
+
     return (
-        <div className={styles.layout_grid_container}>
+        <div>
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header>
-                <Navbar bg="dark" expand="lg" fixed="top">
+                <Navbar bg="light" expand="lg" fixed="top" className={`shadow-sm ${styles.navbar_custom}`}>
                     <Container>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
-                                <Nav.Link  href="#action1">Home</Nav.Link>
-                                <Nav.Link className="active" href="#action2">Link</Nav.Link>
-                                <Nav.Link href="#action2">Link</Nav.Link>
-                                <Nav.Link href="#action2">Link</Nav.Link>
+                                <Nav.Link href="#action1">Sobre mí</Nav.Link>
+                                <Nav.Link href="#sectionProjects">Proyectos</Nav.Link>
+                                <Nav.Link href="#sectionExperience">Experiencia</Nav.Link>
+                                <Nav.Link href="#sectionContact">Creemos algo juntos</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -58,7 +58,7 @@ const MainLayout = ({title, active, children}) => {
                                 </a>
                             </div>
                             <p>
-                                <i className="far fa-copyright"/> 2021 Jesus Brito
+                                <i className="far fa-copyright"/> 2022 Jesús Brito
                             </p>
                         </div>
                         <div className={styles.layout_footer_menu}>

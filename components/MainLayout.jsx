@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/components/MainLayout.module.scss";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 const MainLayout = ({title, active, children}) => {
 
     return (
@@ -29,8 +29,8 @@ const MainLayout = ({title, active, children}) => {
             <main className={styles.layout_main}>{children}</main>
             <footer className={styles.layout_footer}>
                 <div className="container">
-                    <div className={styles.layout_footer_container}>
-                        <div className={styles.layout_footer_networks_column}>
+                    <Row>
+                        <Col md={2}>
                             <div className={styles.layout_footer_networks}>
                                 <a
                                     href="https://github.com/JesusBrito"
@@ -57,32 +57,39 @@ const MainLayout = ({title, active, children}) => {
                                     <i className="fab fa-whatsapp"/>
                                 </a>
                             </div>
-                            <p>
+                            <p className={styles.footer_copy}>
                                 <i className="far fa-copyright"/> 2022 Jesús Brito
                             </p>
-                        </div>
-                        <div className={styles.layout_footer_menu}>
-                            <div className={styles.layout_footer_menu_column}>
-                                <Link href="#">
-                                    <a href="#">Sobre mí</a>
-                                </Link>
-                                <Link href="#">
-                                    <a href="#">Proyectos</a>
-                                </Link>
-                                <Link href="#">
-                                    <a href="#">Experiencia</a>
-                                </Link>
-                            </div>
-                            <div className={styles.layout_footer_menu_column}>
-                                <Link href="#">
-                                    <a href="#">Creemos algo juntos</a>
-                                </Link>
-                                <Link href="#">
-                                    <a href="#">Blog</a>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                        </Col>
+                        <Col md={{ span: 4, offset: 6 }}>
+                            <Row>
+                                <Col md={6}>
+                                    <div className={styles.layout_footer_menu_column}>
+                                        <Link href="#">
+                                            <a href="#">Sobre mí</a>
+                                        </Link>
+                                        <Link href="#">
+                                            <a href="#">Proyectos</a>
+                                        </Link>
+                                        <Link href="#">
+                                            <a href="#">Experiencia</a>
+                                        </Link>
+                                    </div>
+                                </Col>
+                                <Col md={6}>
+                                    <div className={styles.layout_footer_menu_column}>
+                                        <Link href="#">
+                                            <a href="#">Creemos algo juntos</a>
+                                        </Link>
+                                        <Link href="#">
+                                            <a href="#">Blog</a>
+                                        </Link>
+                                    </div>
+
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </div>
             </footer>
             <ScrollToTop/>

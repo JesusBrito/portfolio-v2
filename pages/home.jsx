@@ -127,7 +127,7 @@ const Home = () => {
             <Container>
                 <section className={style.header}>
                     <Row>
-                        <Col sm={12} md={9}>
+                        <Col sm={12} md={9} className="order-2 order-md-1 mt-3 m-md-0">
                             <p>Jesus Brito</p>
                             <h1>Desarrollador Full Stack</h1>
                             <p>Por 4 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
@@ -139,7 +139,7 @@ const Home = () => {
                                 </li>
                             </ul>
                         </Col>
-                        <Col sm={12} md={3} className="d-flex justify-content-center align-items-center">
+                        <Col sm={12} md={3} className="d-flex justify-content-center align-items-center order-1 order-md-2">
                             <img src="/profile_image.png" className="w-75 rounded-circle shadow"
                                  alt="Jesus Brito Foto de perfil"/>
                         </Col>
@@ -197,7 +197,7 @@ const Home = () => {
                 </section>
                 <section id="sectionContact" className="pb-5">
                     <Row className={style.contact}>
-                        <Col md={7} className="d-flex align-items-start justify-content-center flex-column">
+                        <Col md={7} className="d-flex align-items-center align-items-md-start justify-content-center flex-column">
                             <h2 className={style.submenu_header}>Creemos algo juntos</h2>
                             <p>No importa si es grande o pequeño yo te ayudo 😉</p>
 
@@ -211,7 +211,7 @@ const Home = () => {
 
                         </Col>
 
-                        <Col md={5} className="d-flex justify-content-center">
+                        <Col md={5} className="d-flex justify-content-center mt-3 m-md-0">
                             <div className="w-75">
                                 <img className="img-fluid rounded-3 shadow " src='/contact.png' alt=""/>
                             </div>

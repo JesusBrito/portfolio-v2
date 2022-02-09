@@ -4,7 +4,6 @@ import Link from 'next/link'
 import style from '../styles/pages/Home.module.scss'
 import CardProject from "../components/CardProject/CardProject";
 import CardExperience from "../components/CardExperience/CardExperience";
-import {useEffect} from "react";
 import CardKnowledge from "../components/CardKnowledge/CardKnowledge";
 import {useRouter} from "next/router";
 
@@ -63,27 +62,44 @@ const Home = () => {
     const jobMock = [
         {
             id: 1,
-            job: 'Desarrollador Mobile ',
+            job: 'Desarrollador Frontend React',
             company: 'Noktos',
-            description: 'Encargado del desarrollo y mantenimiento de la aplicación Noktos para el serctor hotelero.'
+            icons: [
+                {icon: "fab fa-react", class: "react_blue"},
+                {icon: "fab fa-bootstrap", class: "bootstrap_purple"},
+                {icon: "fab fa-sass", class: "sass_pink"}],
+            description: 'Desarrollo de 3 plataformas enfocadas a la reservación de noches de hotel, gestión de reservaciones y una administrativa, que funciona para visualizar toda la información de las ventas, despliegue de reportes y procesos internos. '
         },
         {
             id: 2,
-            job: 'Desarrollador Mobile ',
-            company: 'Noktos',
-            description: 'Encargado del desarrollo y mantenimiento de la aplicación Noktos para el serctor hotelero.'
+            job: 'Desarrollador Frontend/Mobile',
+            company: 'Filup RH',
+            icons: [
+                {icon: "fab fa-react", class: "react_blue"},
+                {icon: "fab fa-css3-alt", class: "css_blue"},
+                {icon: "fab fa-apple", class: "apple_black"},
+                {icon: "fab fa-android", class: "mobile_green"}],
+            description: 'Durante mi estancia apoyé en el desarrollo de nuevos módulos y el mantenimiento de la plataforma web, mediante la cual se administra la información de los empleados, horarios y todo lo referente a las nóminas. También desarrollé nuevas aplicaciones móviles orientadas a la administración del capital humano, además de dar mantenimiento y soporte a desarrollos previos.'
         },
         {
             id: 3,
-            job: 'Desarrollador Mobile ',
+            job: 'Desarrollador Frontend/Mobile',
             company: 'Noktos',
-            description: 'Encargado del desarrollo y mantenimiento de la aplicación Noktos para el serctor hotelero.'
+            icons: [
+                {icon: "fab fa-react", class: "react_blue"},
+                {icon: "fab fa-bootstrap", class: "bootstrap_purple"},
+                {icon: "fab fa-css3-alt", class: "css_blue"}],
+            description: 'Fui responsable del desarrollo de una plataforma web Tipo OTA para venta de noches de hotel enfocada a clientes corporativos en todo México.'
         },
         {
             id: 4,
-            job: 'Desarrollador Mobile ',
-            company: 'Noktos',
-            description: 'Encargado del desarrollo y mantenimiento de la aplicación Noktos para el serctor hotelero.'
+            job: 'Desarrollador Web',
+            company: 'SEDU - CDMX',
+            icons: [
+                {icon: "fab fa-laravel", class: "html_orange"},
+                {icon: "fab fa-css3-alt", class: "css_blue"},
+                {icon: "fab fa-bootstrap", class: "bootstrap_purple"}],
+            description: 'Diseño y desarrollo de un sistema interno para levantamiento de información dentro de la secretaría enfocado a las necesidades de las diferentes instituciones educativas en la CDMX.'
         }
     ]
 
@@ -193,6 +209,7 @@ const Home = () => {
                                     <CardExperience
                                         job={data.job}
                                         company={data.company}
+                                        icons={data.icons}
                                         description={data.description}/>
                                 </Col>
                             ))

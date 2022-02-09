@@ -5,7 +5,7 @@ const CardKnowledge = ({icon, title, text, classIcon}) => {
     return(
         <React.Fragment>
             <div className={style.card_header}>
-                <div className={style[classIcon]}><i className={icon}/></div>
+                <div className={classIcon}><i className={icon}/></div>
                 <p>{title}</p>
             </div>
             <div className={style.card_body}>

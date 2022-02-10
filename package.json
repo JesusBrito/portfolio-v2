@@ -18,6 +18,7 @@
     "react-bootstrap": "^2.1.1",
     "react-dom": "17.0.2",
     "react-loader-spinner": "^3.1.14",
+    "react-tsparticles": "^1.40.2",
     "sass": "^1.49.0",
     "sweetalert2": "^9.17.1",
     "wowjs": "^1.1.3"

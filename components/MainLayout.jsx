@@ -37,7 +37,7 @@ const MainLayout = ({title, active, children}) => {
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
                                 <Nav.Link href="home"> Inicio</Nav.Link>
-                                <Nav.Link href="#sectionAbout">Sobre mí</Nav.Link>
+                                <Nav.Link href="#sectionAboutMe">Sobre mí</Nav.Link>
                                 <Nav.Link href="#sectionProjects">Proyectos</Nav.Link>
                                 <Nav.Link href="#sectionExperience">Experiencia</Nav.Link>
                                 <Nav.Link href="#sectionContact">Creemos algo juntos</Nav.Link>

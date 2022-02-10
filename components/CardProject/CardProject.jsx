@@ -2,7 +2,8 @@ import Link from 'next/link'
 import {Card} from "react-bootstrap";
 import style from './CardProject.module.scss'
 
-const CardProject = ({date, name, smallDescription, url}) => {
+const CardProject = ({project, showProject}) => {
+    const {date, name, smallDescription, url} = project
     return (
         <Card className="shadow-sm">
             <Card.Img variant="top" src={url} alt={name}/>
@@ -15,9 +16,7 @@ const CardProject = ({date, name, smallDescription, url}) => {
                     <Card.Text>{smallDescription}</Card.Text>
                 </div>
                 <div className={style.card_footer}>
-                    <Link href="#">
-                        <a>Ver <i className="fas fa-arrow-right"/></a>
-                    </Link>
+                    <a onClick={() => showProject(project)}>Ver <i className="fas fa-arrow-right"/></a>
                 </div>
             </Card.Body>
         </Card>

@@ -28,9 +28,11 @@
         font-family: 'Rubik Regular', serif;
         text-decoration: none;
         font-size: 15px;
+        cursor: pointer;
+        color: $blue !important;
     }
     a:hover{
         text-decoration: underline;
-        text-decoration-color: $blue;
+        color: $darkBlue !important;
     }
 }

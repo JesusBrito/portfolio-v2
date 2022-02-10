@@ -1,23 +1,34 @@
 import MainLayout from "../components/MainLayout";
 import {Button, Col, Container, Row} from "react-bootstrap";
-import Link from 'next/link'
 import style from '../styles/pages/Home.module.scss'
 import CardProject from "../components/CardProject/CardProject";
 import CardExperience from "../components/CardExperience/CardExperience";
 import CardKnowledge from "../components/CardKnowledge/CardKnowledge";
 import {useRouter} from "next/router";
 import {returnJobs, returnKnowledge, returnProjects} from "./api/api";
+import {useEffect, useState} from "react";
+import {scrollToTop} from "../utils/Utils";
+import ModalProject from "../components/ModalProject/ModalProject";
 
 const Home = () => {
     const router = useRouter();
     const jobMock = returnJobs()
     const knowledgeMock = returnKnowledge()
     const projectsMock = returnProjects()
+    const [mdProject, setMdProject] = useState(false)
+    const [dataProject, setDataProject] = useState(null)
+    useEffect(() => {
+        scrollToTop()
+    }, [])
 
     const goToContact = () => {
         router.push("contact")
     }
 
+    const showProject = (project) => {
+        setMdProject(true)
+        setDataProject(project)
+    }
 
     return (
         <MainLayout>
@@ -30,20 +41,31 @@ const Home = () => {
                             <p>Por 4 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
                                 ayudándoles a programar nuevas ideas.</p>
                             <ul>
-                                <li><Link href="home">Sobre mí</Link></li>
                                 <li><a href="https://blog.jesusbritodeveloper.com/" target="_blank"
                                        rel="noreferrer">Blog</a>
                                 </li>
                             </ul>
                         </Col>
-                        <Col sm={12} md={3} className="d-flex justify-content-center align-items-center order-1 order-md-2">
+                        <Col sm={12} md={3}
+                             className="d-flex justify-content-center align-items-center order-1 order-md-2">
                             <img src="/profile_image.png" className="w-75 rounded-circle shadow"
                                  alt="Jesus Brito Foto de perfil"/>
                         </Col>
                     </Row>
                 </section>
 
-                <section className="mb-5 animate__animated animate__jackInTheBox" id="">
+                <section className="mb-5 animate__animated animate__jackInTheBox" id="sectionAboutMe">
+                    <h2 className={style.submenu_header}>Sobre mí</h2>
+                    <p className={style.text}>Soy un desarrollador Full Stack Mobile apasionado por compartir mi
+                        conocimiento con otras personas. Me considero autodidacta, proactivo, innovador y creativo, en
+                        busca de crecimiento constante que me lleven a probar nuevas experiencias.</p>
+                    <p className={style.text}>Pienso que las relaciones personales son importantes para el crecimiento
+                        profesional y es por eso, que disfruto mucho la compañía de mis seres queridos. Soy amante de
+                        las nuevas tecnologías y todo lo que engloba este apasionante mundo, uno de mis pasatiempos es
+                        la lectura de ciencia ficción, así como de la científica.</p>
+                </section>
+
+                <section className="mb-5 animate__animated animate__jackInTheBox" id="sectionKnowledge">
                     <h2 className={style.submenu_header}>Conocimientos</h2>
                     <Row>
                         {
@@ -68,10 +90,8 @@ const Home = () => {
                             projectsMock.map(data => (
                                 <Col className="my-3" md={4} key={data.id}>
                                     <CardProject
-                                        name={data.name}
-                                        date={data.date}
-                                        smallDescription={data.small_description}
-                                        url={data.url}/>
+                                        project={data}
+                                        showProject={showProject}/>
                                 </Col>
                             ))
                         }
@@ -117,6 +137,10 @@ const Home = () => {
                     </Row>
                 </section>
             </Container>
+            <ModalProject
+                show={mdProject}
+                setShow={setMdProject}
+                project={dataProject}/>
         </MainLayout>
     )
 }

@@ -89,44 +89,50 @@ export const returnProjects = () => {
   return [
     {
       id: 1,
-      date: "Abril 2020",
+      date: "Mayo 2020",
       name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
+      smallDescription: "Página web promocional de cursos y talleres de acuarelas.",
+      largeDescription: "lorem",
+      url: "/projects/project_trazo.png"
     },
     {
       id: 2,
-      date: "Abril 2020",
-      name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
+      date: "Agosto 2020",
+      name: "Sistema Web",
+      smallDescription: "Sistema web para promoción y venta de acuarelas de un artista visual.",
+      largeDescription: "lorem",
+      url: "/projects/project_watercolor.png"
     },
     {
       id: 3,
       date: "Abril 2020",
       name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
+      smallDescription: "Página web para promoción y contacto desarrollada para una artista visual.",
+      largeDescription: "lorem",
+      url: "/projects/project_cecilia.png"
     },
     {
       id: 4,
-      date: "Abril 2020",
-      name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
+      date: "Febrero 2020",
+      name: "Sistema Web",
+      smallDescription: "Plataforma para compra de noches de hotel para la cadena Extended Suites",
+      largeDescription: "lorem",
+      url: "/projects/project_extended.png"
     },
     {
       id: 5,
-      date: "Abril 2020",
-      name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
+      date: "Junio 2021",
+      name: "Aplicaciones móviles",
+      smallDescription: "Aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales.",
+      largeDescription: "Desarrollo de aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales. El proyecto contempla dos aplicaciones, una para que los prestadores de servicios puedan anunciarse y poder ofrecer sus conocimientos, la segunda aplicación está enfocada al cliente, desde donde puede solicitar un servicio, dar seguimiento al mismo además de consultar y gestionar sus servicios anteriores.",
+      url: "/projects/project_gpservices.png"
     },
     {
       id: 6,
       date: "Abril 2020",
       name: "Pagina Web",
-      small_description: "La mejor forma de hospedarse.",
+      smallDescription: "La mejor forma de hospedarse.",
+      largeDescription: "lorem",
       url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
     }
   ]

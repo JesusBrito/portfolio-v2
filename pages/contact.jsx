@@ -1,15 +1,18 @@
 import {Button, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
 import MainLayout from "../components/MainLayout";
 import emailjs from '@emailjs/browser';
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import style from '../styles/pages/Contact.module.scss'
 import Swal from "sweetalert2";
+import {scrollToTop} from "../utils/Utils";
 const Contact = () => {
     const form = useRef();
-
+    useEffect(() => {
+        scrollToTop()
+    }, [])
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_584ty8s', 'template_o684yax', form.current, 'user_PCiyIgFuno0vCIpssMrpC')
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_USER_ID)
             .then((result) => {
                 Swal.fire({
                     title: '¡Gracias!',
@@ -40,7 +43,7 @@ const Contact = () => {
                                 <Col>
                                     <FloatingLabel
                                         controlId="txtName"
-                                        label="¿Cuál es tu nombre?">
+                                        label="Nombre">
                                         <Form.Control
                                             type="text"
                                             name="name"
@@ -52,7 +55,7 @@ const Contact = () => {
                                 <Col>
                                     <FloatingLabel
                                         controlId="txtEmail"
-                                        label="¿Cuál es tu email?">
+                                        label="Email">
                                         <Form.Control
                                             type="email"
                                             name="email"

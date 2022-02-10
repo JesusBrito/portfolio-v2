@@ -12,12 +12,10 @@ const ModalProject = ({show, setShow, project}) => {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <Image
+            <img
                 src={project?.url}
                 alt={project?.name}
-                width="1920px"
-                height="1080px"
-                layout="responsive"/>
+                className={style.image}/>
             <div className="mt-4">
                 <p className={style.subtitle}>Descripción:</p>
                 <p className={style.text}>{project?.largeDescription}</p>

@@ -1,5 +1,4 @@
 import {Button, Modal} from "react-bootstrap";
-import Image from 'next/image'
 import style from './ModalProject.module.scss'
 const ModalProject = ({show, setShow, project}) => {
     return <Modal

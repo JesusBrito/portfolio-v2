@@ -4,6 +4,7 @@ import styles from "../styles/components/MainLayout.module.scss";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import React from "react";
+
 const MainLayout = ({title, active, children}) => {
 
     return (
@@ -11,11 +12,28 @@ const MainLayout = ({title, active, children}) => {
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico"/>
+                {/* Global Site Tag (gtag.js) - Google Analytics */}
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                          page_path: window.location.pathname,
+                        });
+                      `,
+                    }}
+                />
             </Head>
             <header>
                 <Navbar bg="light" expand="lg" fixed="top" className={`shadow-sm ${styles.navbar_custom}`}>
                     <Container>
-                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Toggle aria-controls="navbarScroll"/>
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
                                 <Nav.Link href="home"> Inicio</Nav.Link>
@@ -65,7 +83,7 @@ const MainLayout = ({title, active, children}) => {
                                 <Col md={6}>
                                     <div className={styles.layout_footer_menu_column}>
                                         <Link href="#">
-                                            <a href="#">Sobre mí</a>
+                                            <a href="#"></a>
                                         </Link>
                                         <Link href="#">
                                             <a href="#">Proyectos</a>

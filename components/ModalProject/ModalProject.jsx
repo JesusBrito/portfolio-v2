@@ -18,7 +18,11 @@ const ModalProject = ({show, setShow, project}) => {
                 width="1920px"
                 height="1080px"
                 layout="responsive"/>
-            <p className={style.text}>{project?.largeDescription}</p>
+            <div className="mt-4">
+                <p className={style.subtitle}>Descripción:</p>
+                <p className={style.text}>{project?.largeDescription}</p>
+
+            </div>
         </Modal.Body>
         <Modal.Footer>
             <Button variant="secondary" onClick={() => setShow(false)}>

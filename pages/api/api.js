@@ -92,7 +92,7 @@ export const returnProjects = () => {
       date: "Mayo 2020",
       name: "Pagina Web",
       smallDescription: "Página web promocional de cursos y talleres de acuarelas.",
-      largeDescription: "lorem",
+      largeDescription: "Se desarrollo una página web para realizar la promoción de cursos y talleres realizados en México y Latinoamérica por parte de un grupo de artistas visuales. Le realizó un levantamiento de requerimientos para conocer las necesidades del cliente, se maquetó y se desplegó en un hosting",
       url: "/projects/project_trazo.png"
     },
     {
@@ -100,7 +100,7 @@ export const returnProjects = () => {
       date: "Agosto 2020",
       name: "Sistema Web",
       smallDescription: "Sistema web para promoción y venta de acuarelas de un artista visual.",
-      largeDescription: "lorem",
+      largeDescription: "Se desarrollo un sistema web para la promoción y venta de acuarelas, se hizo un levantamiento de requerimientos, se maquetó y se desplegó en un hosting. Además se creó un API para poder obtener toda la información referente a las pinturas.",
       url: "/projects/project_watercolor.png"
     },
     {
@@ -108,7 +108,7 @@ export const returnProjects = () => {
       date: "Abril 2020",
       name: "Pagina Web",
       smallDescription: "Página web para promoción y contacto desarrollada para una artista visual.",
-      largeDescription: "lorem",
+      largeDescription: "Página web diseñanada como portafolio visual para dar difusión al trabajo realizado por una artista visual, ",
       url: "/projects/project_cecilia.png"
     },
     {
@@ -116,7 +116,7 @@ export const returnProjects = () => {
       date: "Febrero 2020",
       name: "Sistema Web",
       smallDescription: "Plataforma para compra de noches de hotel para la cadena Extended Suites",
-      largeDescription: "lorem",
+      largeDescription: "Sistema web tipo Online Travell Agency (OTA) para venta de noches de hotel enfocada a clientes corporativos en todo México.",
       url: "/projects/project_extended.png"
     },
     {
@@ -127,13 +127,5 @@ export const returnProjects = () => {
       largeDescription: "Desarrollo de aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales. El proyecto contempla dos aplicaciones, una para que los prestadores de servicios puedan anunciarse y poder ofrecer sus conocimientos, la segunda aplicación está enfocada al cliente, desde donde puede solicitar un servicio, dar seguimiento al mismo además de consultar y gestionar sus servicios anteriores.",
       url: "/projects/project_gpservices.png"
     },
-    {
-      id: 6,
-      date: "Abril 2020",
-      name: "Pagina Web",
-      smallDescription: "La mejor forma de hospedarse.",
-      largeDescription: "lorem",
-      url: "https://res.cloudinary.com/drgf9lfmf/image/upload/v1625795698/hotel-exterior_nqvnqz.jpg"
-    }
   ]
 }

@@ -9,7 +9,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_584ty8     s', 'template_o684yax', form.current, 'user_PCiyIgFuno0vCIpssMrpC')
+        emailjs.sendForm('service_584ty8s', 'template_o684yax', form.current, 'user_PCiyIgFuno0vCIpssMrpC')
             .then((result) => {
                 Swal.fire({
                     title: '¡Gracias!',

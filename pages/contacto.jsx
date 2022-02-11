@@ -5,7 +5,7 @@ import {useEffect, useRef} from "react";
 import style from '../styles/pages/Contact.module.scss'
 import Swal from "sweetalert2";
 import {scrollToTop} from "../utils/Utils";
-const Contact = () => {
+const Contacto = () => {
     const form = useRef();
     useEffect(() => {
         scrollToTop()
@@ -133,4 +133,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contacto

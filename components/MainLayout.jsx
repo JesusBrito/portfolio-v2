@@ -36,7 +36,7 @@ const MainLayout = ({title, active, children}) => {
                         <Navbar.Toggle aria-controls="navbarScroll"/>
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
-                                <Nav.Link href="home"> Inicio</Nav.Link>
+                                <Nav.Link href="/"> Inicio</Nav.Link>
                                 <Nav.Link href="#sectionAboutMe">Sobre mí</Nav.Link>
                                 <Nav.Link href="#sectionProjects">Proyectos</Nav.Link>
                                 <Nav.Link href="#sectionExperience">Experiencia</Nav.Link>

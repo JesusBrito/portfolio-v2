@@ -13,13 +13,14 @@ async function generateSiteMap() {
         'pages/**/*.jsx',
         'pages/_*.jsx',
         'pages/**/[id].jsx',
+        'pages/index.js',
     ])
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           ${pages
         .map(page => {
-            const regex = /(pages)|(src)|(.jsx)|(.md)|(index)/gi;
+            const regex = /(pages)|(src)|(.jsx)|(.js)|(.md)|(index)/gi;
             const route = page.replace(regex, '')
             console.log(route)
             console.log(route)

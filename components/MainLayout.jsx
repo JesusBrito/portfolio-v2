@@ -12,7 +12,10 @@ const MainLayout = ({title, active, children}) => {
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico"/>
-                {/* Global Site Tag (gtag.js) - Google Analytics */}
+                <meta name="description" content="Desarrollador Full Stack con 3 años de experiencia, trabajo con tecnologías como React, Node js, Flutter, MySql, Azure y AWS, he desarrollado proyectos para la industria privada y pública y estoy disponible para desarrollar cualquier tipo de proyecto y ayudar a las personas y a las empresas a cumplir sus metas"/>
+                <meta name="keywords" content="proyectos web, páginas web, desarrollo web, desarrollo de aplicaciones"/>
+                <meta name="author" content="Juan Jesús Brito Brito" />
+                <meta name="copyright" content="Juan Jesús Brito Brito" />
                 <script
                     async
                     src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -29,6 +32,7 @@ const MainLayout = ({title, active, children}) => {
                       `,
                     }}
                 />
+                <meta name="description" content=""/>
             </Head>
             <header>
                 <Navbar bg="light" expand="lg" fixed="top" className={`shadow-sm ${styles.navbar_custom}`}>

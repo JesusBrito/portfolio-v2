@@ -36,11 +36,21 @@ const MainLayout = ({title, active, children}) => {
                         <Navbar.Toggle aria-controls="navbarScroll"/>
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="ms-auto">
-                                <Nav.Link href="/"> Inicio</Nav.Link>
-                                <Nav.Link href="#sectionAboutMe">Sobre mí</Nav.Link>
-                                <Nav.Link href="#sectionProjects">Proyectos</Nav.Link>
-                                <Nav.Link href="#sectionExperience">Experiencia</Nav.Link>
-                                <Nav.Link href="#sectionContact">Creemos algo juntos</Nav.Link>
+                                <Link href="/">
+                                    <a className="nav-link">Inicio</a>
+                                </Link>
+                                <Link href={active === 1 ? '#sectionAboutMe':'/#sectionAboutMe'}>
+                                    <a className="nav-link">Sobre mí</a>
+                                </Link>
+                                <Link href={active === 1 ? '#sectionProjects':'/#sectionProjects'}>
+                                    <a className="nav-link">Proyectos</a>
+                                </Link>
+                                <Link href={active === 1 ? '#sectionExperience':'/#sectionExperience'}>
+                                    <a className="nav-link">Experiencia</a>
+                                </Link>
+                                <Link href={active === 1 ? '/#sectionExperience':'#'}>
+                                    <a className="nav-link">Creemos algo juntos</a>
+                                </Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -82,24 +92,25 @@ const MainLayout = ({title, active, children}) => {
                             <Row>
                                 <Col md={6}>
                                     <div className={styles.layout_footer_menu_column}>
-                                        <Link href="#">
-                                            <a href="#"></a>
+                                        <Link href="#sectionAboutMe">
+                                            <a>Sobre mí</a>
                                         </Link>
-                                        <Link href="#">
-                                            <a href="#">Proyectos</a>
+                                        <Link href="#sectionProjects">
+                                            <a>Proyectos</a>
                                         </Link>
-                                        <Link href="#">
-                                            <a href="#">Experiencia</a>
+                                        <Link href="#sectionExperience">
+                                            <a>Experiencia</a>
                                         </Link>
                                     </div>
                                 </Col>
                                 <Col md={6}>
                                     <div className={styles.layout_footer_menu_column}>
-                                        <Link href="#">
-                                            <a href="#">Creemos algo juntos</a>
+                                        <Link href="/contacto">
+                                            <a>Creemos algo juntos</a>
                                         </Link>
                                         <Link href="#">
-                                            <a href="#">Blog</a>
+                                            <a href="https://blog.jesusbritodeveloper.com/" target="_blank"
+                                               rel="noreferrer">Blog</a>
                                         </Link>
                                     </div>
 

@@ -31,7 +31,7 @@ const Home = () => {
     }
 
     return (
-        <MainLayout>
+        <MainLayout title="Jesús Brito" active={1}>
             <Container>
                 <section className={style.header} id="sectionAbout">
                     <Row>

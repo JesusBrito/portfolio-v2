@@ -30,7 +30,7 @@ const Contacto = () => {
             });
     };
     return (
-        <MainLayout>
+        <MainLayout title="Contacto" active={2}>
             <Container>
                 <Row>
                     <Col sm={12} lg={6}>
@@ -124,7 +124,7 @@ const Contacto = () => {
                     </Col>
                     <Col lg={6} className="d-none d-lg-flex justify-content-end">
                         <div className="w-75">
-                            <img className="img-fluid rounded-3 shadow " src='/contact.png' alt=""/>
+                            <img className="img-fluid rounded-3 shadow " src='/contact_header.png' alt=""/>
                         </div>
                     </Col>
                 </Row>

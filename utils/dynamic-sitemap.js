@@ -1,7 +1,7 @@
 // Change to your custom URL
 const globby = require("globby");
 const fs = require("fs");
-const YOUR_URL = "https://www.jesusbritodeveloper.com/"
+const YOUR_URL = "https://www.jesusbritodeveloper.com"
 const getDate = new Date().toISOString();
 
 
@@ -19,8 +19,10 @@ async function generateSiteMap() {
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           ${pages
         .map(page => {
-            const regex = /(pages)|(src)|(.js)|(.md)|(index)/gi;
+            const regex = /(pages)|(src)|(.jsx)|(.md)|(index)/gi;
             const route = page.replace(regex, '')
+            console.log(route)
+            console.log(route)
             return `
                       <url>
                           <loc>${`${YOUR_URL}${route}`}</loc>

@@ -38,7 +38,7 @@ const Home = () => {
                         <Col sm={12} md={9} className="order-2 order-md-1 mt-3 m-md-0">
                             <p>Jesus Brito</p>
                             <h1>Desarrollador Full Stack</h1>
-                            <p>Por 4 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
+                            <p>Por 5 años he trabajado con empresas del sector finaciero, gobierno, salud y asegurador
                                 ayudándoles a programar nuevas ideas.</p>
                             <ul>
                                 <li><a href="https://blog.jesusbritodeveloper.com/" target="_blank"
@@ -65,24 +65,23 @@ const Home = () => {
                         la lectura de ciencia ficción, así como de la científica.</p>
                 </section>
 
-                <section className="mb-5 animate__animated animate__jackInTheBox" id="sectionKnowledge">
-                    <h2 className={style.submenu_header}>Conocimientos</h2>
+
+                <section className="mb-5" id="sectionExperience">
+                    <h2 className={style.submenu_header}>Experiencia</h2>
                     <Row>
                         {
-                            knowledgeMock.map(data => (
+                            jobMock.map(data => (
                                 <Col className="my-3" md={4} key={data.id}>
-                                    <CardKnowledge
-                                        icon={data.icon}
-                                        classIcon={data.class}
-                                        title={data.title}
-                                        text={data.text}
-                                        url={data.url}/>
+                                    <CardExperience
+                                        job={data.job}
+                                        company={data.company}
+                                        icons={data.icons}
+                                        description={data.description}/>
                                 </Col>
                             ))
                         }
                     </Row>
                 </section>
-
                 <section className="mb-5" id="sectionProjects">
                     <h2 className={style.submenu_header}>Proyectos</h2>
                     <Row>
@@ -97,17 +96,19 @@ const Home = () => {
                         }
                     </Row>
                 </section>
-                <section className="mb-5" id="sectionExperience">
-                    <h2 className={style.submenu_header}>Experiencia</h2>
+
+                <section className="mb-5 animate__animated animate__jackInTheBox" id="sectionKnowledge">
+                    <h2 className={style.submenu_header}>Conocimientos</h2>
                     <Row>
                         {
-                            jobMock.map(data => (
+                            knowledgeMock.map(data => (
                                 <Col className="my-3" md={4} key={data.id}>
-                                    <CardExperience
-                                        job={data.job}
-                                        company={data.company}
-                                        icons={data.icons}
-                                        description={data.description}/>
+                                    <CardKnowledge
+                                        icon={data.icon}
+                                        classIcon={data.class}
+                                        title={data.title}
+                                        text={data.text}
+                                        url={data.url}/>
                                 </Col>
                             ))
                         }

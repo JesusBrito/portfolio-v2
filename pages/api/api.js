@@ -42,6 +42,16 @@ export const returnJobs = () => {
         {icon: "fab fa-css3-alt", class: "css_blue"},
         {icon: "fab fa-bootstrap", class: "bootstrap_purple"}],
       description: 'Diseño y desarrollo de un sistema interno para levantamiento de información dentro de la secretaría enfocado a las necesidades de las diferentes instituciones educativas en la CDMX.'
+    },
+    {
+      id: 5,
+      job: 'Desarrollador Web',
+      company: 'GBM',
+      icons: [
+        {icon: "fab fa-react", class: "react_blue"},
+        {icon: "fab fa-node-js", class: "node_green"},
+        {icon: "fab fa-sass", class: "sass_pink"}],
+      description: 'Desarrollo y mantenimiento de sistemas internos y de cara al cliente.'
     }
   ]
 }
@@ -121,11 +131,19 @@ export const returnProjects = () => {
     },
     {
       id: 5,
-      date: "Junio 2021",
+      date: "Junio 2021 - Actualidad",
       name: "Aplicaciones móviles",
       smallDescription: "Aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales.",
       largeDescription: "Desarrollo de aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales. El proyecto contempla dos aplicaciones, una para que los prestadores de servicios puedan anunciarse y poder ofrecer sus conocimientos, la segunda aplicación está enfocada al cliente, desde donde puede solicitar un servicio, dar seguimiento al mismo además de consultar y gestionar sus servicios anteriores.",
       url: "/projects/project_gpservices.png"
+    },
+    {
+      id: 6,
+      date: "Diciembre 2022 - Actualidad",
+      name: "Sistema para promoción y administración de invitaciones digitales",
+      smallDescription: "Página web promocional y sistemas administrativos.",
+      largeDescription: "Desarrollo de una página web promocional para empresa dedicada a la creación de invitaciones digitales. Además se crearon 2 sistemas administrativos, un backoffice para la administración de los eventos y un sistema enfocado a que los clientes puedan realizar el envío de sus invitaciones a sus invitados.",
+      url: "/projects/project_invitaciones.png"
     },
   ]
 }

@@ -4,57 +4,67 @@ export const returnJobs = () => {
   return [
     {
       id: 1,
-      job: 'Desarrollador Frontend React',
-      company: 'Noktos',
+      job: "Desarrollador Frontend React",
+      company: "Noktos",
       icons: [
-        {icon: "fab fa-react", class: "react_blue"},
-        {icon: "fab fa-bootstrap", class: "bootstrap_purple"},
-        {icon: "fab fa-sass", class: "sass_pink"}],
-      description: 'Desarrollo de 3 plataformas enfocadas a la reservación de noches de hotel, gestión de reservaciones y una administrativa, que funciona para visualizar toda la información de las ventas, despliegue de reportes y procesos internos. '
+        { icon: "fab fa-react", class: "react_blue" },
+        { icon: "fab fa-bootstrap", class: "bootstrap_purple" },
+        { icon: "fab fa-sass", class: "sass_pink" },
+      ],
+      description:
+        "Desarrollo de 3 plataformas enfocadas a la reservación de noches de hotel, gestión de reservaciones y una administrativa, que funciona para visualizar toda la información de las ventas, despliegue de reportes y procesos internos. ",
     },
     {
       id: 2,
-      job: 'Desarrollador Frontend/Mobile',
-      company: 'Filup RH',
+      job: "Desarrollador Frontend/Mobile",
+      company: "Filup RH",
       icons: [
-        {icon: "fab fa-react", class: "react_blue"},
-        {icon: "fab fa-css3-alt", class: "css_blue"},
-        {icon: "fab fa-apple", class: "apple_black"},
-        {icon: "fab fa-android", class: "mobile_green"}],
-      description: 'Durante mi estancia apoyé en el desarrollo de nuevos módulos y el mantenimiento de la plataforma web, mediante la cual se administra la información de los empleados, horarios y todo lo referente a las nóminas. También desarrollé nuevas aplicaciones móviles orientadas a la administración del capital humano, además de dar mantenimiento y soporte a desarrollos previos.'
+        { icon: "fab fa-react", class: "react_blue" },
+        { icon: "fab fa-css3-alt", class: "css_blue" },
+        { icon: "fab fa-apple", class: "apple_black" },
+        { icon: "fab fa-android", class: "mobile_green" },
+      ],
+      description:
+        "Durante mi estancia apoyé en el desarrollo de nuevos módulos y el mantenimiento de la plataforma web, mediante la cual se administra la información de los empleados, horarios y todo lo referente a las nóminas. También desarrollé nuevas aplicaciones móviles orientadas a la administración del capital humano, además de dar mantenimiento y soporte a desarrollos previos.",
     },
     {
       id: 3,
-      job: 'Desarrollador Frontend/Mobile',
-      company: 'Noktos',
+      job: "Desarrollador Frontend/Mobile",
+      company: "Noktos",
       icons: [
-        {icon: "fab fa-react", class: "react_blue"},
-        {icon: "fab fa-bootstrap", class: "bootstrap_purple"},
-        {icon: "fab fa-css3-alt", class: "css_blue"}],
-      description: 'Fui responsable del desarrollo de una plataforma web Tipo OTA para venta de noches de hotel enfocada a clientes corporativos en todo México.'
+        { icon: "fab fa-react", class: "react_blue" },
+        { icon: "fab fa-bootstrap", class: "bootstrap_purple" },
+        { icon: "fab fa-css3-alt", class: "css_blue" },
+      ],
+      description:
+        "Fui responsable del desarrollo de una plataforma web Tipo OTA para venta de noches de hotel enfocada a clientes corporativos en todo México.",
     },
     {
       id: 4,
-      job: 'Desarrollador Web',
-      company: 'SEDU - CDMX',
+      job: "Desarrollador Web",
+      company: "SEDU - CDMX",
       icons: [
-        {icon: "fab fa-laravel", class: "html_orange"},
-        {icon: "fab fa-css3-alt", class: "css_blue"},
-        {icon: "fab fa-bootstrap", class: "bootstrap_purple"}],
-      description: 'Diseño y desarrollo de un sistema interno para levantamiento de información dentro de la secretaría enfocado a las necesidades de las diferentes instituciones educativas en la CDMX.'
+        { icon: "fab fa-laravel", class: "html_orange" },
+        { icon: "fab fa-css3-alt", class: "css_blue" },
+        { icon: "fab fa-bootstrap", class: "bootstrap_purple" },
+      ],
+      description:
+        "Diseño y desarrollo de un sistema interno para levantamiento de información dentro de la secretaría enfocado a las necesidades de las diferentes instituciones educativas en la CDMX.",
     },
     {
       id: 5,
-      job: 'Desarrollador Web',
-      company: 'GBM',
+      job: "Desarrollador Web",
+      company: "GBM",
       icons: [
-        {icon: "fab fa-react", class: "react_blue"},
-        {icon: "fab fa-node-js", class: "node_green"},
-        {icon: "fab fa-sass", class: "sass_pink"}],
-      description: 'Desarrollo y mantenimiento de sistemas internos y de cara al cliente.'
-    }
-  ]
-}
+        { icon: "fab fa-react", class: "react_blue" },
+        { icon: "fab fa-node-js", class: "node_green" },
+        { icon: "fab fa-sass", class: "sass_pink" },
+      ],
+      description:
+        "Desarrollo y mantenimiento de sistemas internos y de cara al cliente.",
+    },
+  ];
+};
 export const returnKnowledge = () => {
   return [
     {
@@ -62,88 +72,98 @@ export const returnKnowledge = () => {
       icon: "fab fa-react",
       class: "react_blue",
       title: "Frontend React",
-      text: "<p>Llevo un par de años trabajando con <b>React</b>, utilizo <b>Redux</b> para el manejo del estado de la aplicación, tengo conocimientos en <b>Next js</b> para Server Side Render, temas de SEO y analíticas. Utilizo Fetch y Axios para consumo de APIs. También manejo Javascript moderno (ES6)</p>"
+      text: "<p>Llevo un par de años trabajando con <b>React</b>, utilizo <b>Redux</b> para el manejo del estado de la aplicación, tengo conocimientos en <b>Next js</b> para Server Side Render, temas de SEO y analíticas. Utilizo Fetch y Axios para consumo de APIs. También manejo Javascript moderno (ES6)</p>",
     },
     {
       id: 2,
       icon: "fab fa-node-js",
       class: "node_green",
       title: "Backend Node.js",
-      text: "<p>Conocimientos básicos sobre <b>Node js</b> creación de <b>API´s REST con Express</b>, uso de <b>JWT</b> para manejo de sesiones, Conexión con <b>MongoDB</b> y <b>MySQL</b>.</p>"
+      text: "<p>Conocimientos básicos sobre <b>Node js</b> creación de <b>API´s REST con Express</b>, uso de <b>JWT</b> para manejo de sesiones, Conexión con <b>MongoDB</b> y <b>MySQL</b>.</p>",
     },
     {
       id: 3,
       icon: "fas fa-code",
       class: "html_orange",
       title: "Tecnologías Web",
-      text: "<p>Utilizo CSS moderno y resposivo mediante <b>flexbox y grids</b>, además tengo experiencia con <b>Bootstrap</b> y otros frameworks como <b>Tailwind</b>. Entre las tecnologías que suelo utilizar está el preprocesador <b>Sass</b> para poder estilizar más rápido y poder reutilizar el código.</p>"
+      text: "<p>Utilizo CSS moderno y resposivo mediante <b>flexbox y grids</b>, además tengo experiencia con <b>Bootstrap</b> y otros frameworks como <b>Tailwind</b>. Entre las tecnologías que suelo utilizar está el preprocesador <b>Sass</b> para poder estilizar más rápido y poder reutilizar el código.</p>",
     },
     {
       id: 4,
       icon: "fas fa-mobile-alt",
       class: "mobile_green",
       title: "Mobile",
-      text: "<p>Desarrollo de aplicaciones nativas multiplataforma utilizando el <b>SDK de Flutter</b>, consumo de API Rest, manejo de estados con <b>BLOC</b>, utilización de sensores y hardware, utilización de mapas y geolocalización en tiempo real.</p>"
+      text: "<p>Desarrollo de aplicaciones nativas multiplataforma utilizando el <b>SDK de Flutter</b>, consumo de API Rest, manejo de estados con <b>BLOC</b>, utilización de sensores y hardware, utilización de mapas y geolocalización en tiempo real.</p>",
     },
     {
       id: 5,
       icon: "fas fa-server",
       class: "cloud_blue",
       title: "Cloud",
-      text: "<p>He trabajado con <b>AWS</b> y <b>Azure</b> para realizar despliegues de APIs desarrolladas con Node y Laravel además de aplicaciones frontend desarrolladas con React. Cuento con la certificación <b>AZ-900</b> proporcionada por Microsoft.</p>"
-    }
-
-  ]
-}
+      text: "<p>He trabajado con <b>AWS</b> y <b>Azure</b> para realizar despliegues de APIs desarrolladas con Node y Laravel además de aplicaciones frontend desarrolladas con React. Cuento con la certificación <b>AZ-900</b> proporcionada por Microsoft.</p>",
+    },
+  ];
+};
 export const returnProjects = () => {
   return [
     {
       id: 1,
       date: "Mayo 2020",
       name: "Pagina Web",
-      smallDescription: "Página web promocional de cursos y talleres de acuarelas.",
-      largeDescription: "Se desarrollo una página web para realizar la promoción de cursos y talleres realizados en México y Latinoamérica por parte de un grupo de artistas visuales. Le realizó un levantamiento de requerimientos para conocer las necesidades del cliente, se maquetó y se desplegó en un hosting",
-      url: "/projects/project_trazo.png"
+      smallDescription:
+        "Página web promocional de cursos y talleres de acuarelas.",
+      largeDescription:
+        "Se desarrollo una página web para realizar la promoción de cursos y talleres realizados en México y Latinoamérica por parte de un grupo de artistas visuales. Le realizó un levantamiento de requerimientos para conocer las necesidades del cliente, se maquetó y se desplegó en un hosting",
+      url: "/projects/project_trazo.png",
     },
     {
       id: 2,
       date: "Agosto 2020",
       name: "Sistema Web",
-      smallDescription: "Sistema web para promoción y venta de acuarelas de un artista visual.",
-      largeDescription: "Se desarrollo un sistema web para la promoción y venta de acuarelas, se hizo un levantamiento de requerimientos, se maquetó y se desplegó en un hosting. Además se creó un API para poder obtener toda la información referente a las pinturas.",
-      url: "/projects/project_watercolor.png"
+      smallDescription:
+        "Sistema web para promoción y venta de acuarelas de un artista visual.",
+      largeDescription:
+        "Se desarrollo un sistema web para la promoción y venta de acuarelas, se hizo un levantamiento de requerimientos, se maquetó y se desplegó en un hosting. Además se creó un API para poder obtener toda la información referente a las pinturas.",
+      url: "/projects/project_watercolor.png",
     },
     {
       id: 3,
       date: "Abril 2020",
       name: "Pagina Web",
-      smallDescription: "Página web para promoción y contacto desarrollada para una artista visual.",
-      largeDescription: "Página web diseñanada como portafolio visual para dar difusión al trabajo realizado por una artista visual, ",
-      url: "/projects/project_cecilia.png"
+      smallDescription:
+        "Página web para promoción y contacto desarrollada para una artista visual.",
+      largeDescription:
+        "Página web diseñanada como portafolio visual para dar difusión al trabajo realizado por una artista visual, ",
+      url: "/projects/project_cecilia.png",
     },
     {
       id: 4,
       date: "Febrero 2020",
       name: "Sistema Web",
-      smallDescription: "Plataforma para compra de noches de hotel para la cadena Extended Suites",
-      largeDescription: "Sistema web tipo Online Travell Agency (OTA) para venta de noches de hotel enfocada a clientes corporativos en todo México.",
-      url: "/projects/project_extended.png"
+      smallDescription:
+        "Plataforma para compra de noches de hotel para la cadena Extended Suites",
+      largeDescription:
+        "Sistema web tipo Online Travell Agency (OTA) para venta de noches de hotel enfocada a clientes corporativos en todo México.",
+      url: "/projects/project_extended.png",
     },
     {
       id: 5,
       date: "Junio 2021 - Actualidad",
       name: "Aplicaciones móviles",
-      smallDescription: "Aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales.",
-      largeDescription: "Desarrollo de aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales. El proyecto contempla dos aplicaciones, una para que los prestadores de servicios puedan anunciarse y poder ofrecer sus conocimientos, la segunda aplicación está enfocada al cliente, desde donde puede solicitar un servicio, dar seguimiento al mismo además de consultar y gestionar sus servicios anteriores.",
-      url: "/projects/project_gpservices.png"
+      smallDescription:
+        "Aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales.",
+      largeDescription:
+        "Desarrollo de aplicaciones móviles enfocadas a ofrecer y solicitar servicios profesionales. El proyecto contempla dos aplicaciones, una para que los prestadores de servicios puedan anunciarse y poder ofrecer sus conocimientos, la segunda aplicación está enfocada al cliente, desde donde puede solicitar un servicio, dar seguimiento al mismo además de consultar y gestionar sus servicios anteriores.",
+      url: "/projects/project_gpservices.png",
     },
     {
       id: 6,
       date: "Diciembre 2022 - Actualidad",
       name: "Sistema para promoción y administración de invitaciones digitales",
       smallDescription: "Página web promocional y sistemas administrativos.",
-      largeDescription: "Desarrollo de una página web promocional para empresa dedicada a la creación de invitaciones digitales. Además se crearon 2 sistemas administrativos, un backoffice para la administración de los eventos y un sistema enfocado a que los clientes puedan realizar el envío de sus invitaciones a sus invitados.",
-      url: "/projects/project_invitaciones.png"
+      largeDescription:
+        "Desarrollo de una página web promocional para empresa dedicada a la creación de invitaciones digitales. Además se crearon 2 sistemas administrativos, un backoffice para la administración de los eventos y un sistema enfocado a que los clientes puedan realizar el envío de sus invitaciones a sus invitados.",
+      url: "/projects/project_invitaciones.png",
     },
-  ]
-}
+  ];
+};

@@ -124,7 +124,7 @@ const Contacto = () => {
                     </Col>
                     <Col lg={6} className="d-none d-lg-flex justify-content-end">
                         <div className="w-75">
-                            <img className="img-fluid rounded-3 shadow " src='/contact_header.png' alt=""/>
+                            <img className="img-fluid rounded-3 shadow " src='/contact_header.png' alt="header de contacto" loading="lazy"/>
                         </div>
                     </Col>
                 </Row>

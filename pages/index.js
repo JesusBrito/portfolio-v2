@@ -49,7 +49,8 @@ const Home = () => {
                         <Col sm={12} md={3}
                              className="d-flex justify-content-center align-items-center order-1 order-md-2">
                             <img src="/profile_image.png" className="w-75 rounded-circle shadow"
-                                 alt="Jesus Brito Foto de perfil"/>
+                                 alt="Jesus Brito Foto de perfil"
+                                 loading="lazy"/>
                         </Col>
                     </Row>
                 </section>
@@ -132,7 +133,7 @@ const Home = () => {
 
                         <Col md={5} className="d-flex justify-content-center mt-3 m-md-0">
                             <div className="w-75">
-                                <img className="img-fluid rounded-3 shadow " src='/contact.png' alt=""/>
+                                <img className="img-fluid rounded-3 shadow " src='/contact.png' alt="Imágen contacto" loading="lazy"/>
                             </div>
                         </Col>
                     </Row>

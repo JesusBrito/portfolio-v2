@@ -14,7 +14,8 @@ const ModalProject = ({show, setShow, project}) => {
             <img
                 src={project?.url}
                 alt={project?.name}
-                className={style.image}/>
+                className={style.image}
+                loading="lazy"/>
             <div className="mt-4">
                 <p className={style.subtitle}>Descripción:</p>
                 <p className={style.text}>{project?.largeDescription}</p>
